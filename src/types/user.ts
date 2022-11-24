@@ -25,7 +25,8 @@ export const UserPermissions = [
   "delete",
   "webdav_read",
   "webdav_manage",
-] as const
+  "read_files",
+] as const;
 
 export const UserMethods = {
   is_guest: (user: User) => user.role === UserRole.GUEST,

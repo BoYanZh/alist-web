@@ -9,7 +9,8 @@
     "copy": "Copy",
     "delete": "Delete",
     "webdav_read": "Webdav read",
-    "webdav_manage": "Webdav manage"
+    "webdav_manage": "Webdav manage",
+    "read_files": "Read files"
   },
   "username": "Username",
   "password": "Password",
