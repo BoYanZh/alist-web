@@ -3,7 +3,7 @@ name: build
 on:
   push:
     branches:
-      - main
+      - course
 
 jobs:
   build:
@@ -38,7 +38,7 @@ jobs:
       - name: Checkout dist repo
         uses: actions/checkout@v3
         with:
-          repository: alist-org/web-dist
+          repository: BoYanZh/web-dist
           ref: dev
           path: web-dist
           persist-credentials: false
@@ -48,12 +48,8 @@ jobs:
         run: |
           cd alist-web
           pnpm install
-          pnpm i18n:build
           pnpm build
           cd ..
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Commit dist
         run: |
@@ -61,8 +57,8 @@ jobs:
           rm -rf dist
           cp -r ../alist-web/dist .
           git add .
-          git config --local user.email "i@nn.ci"
-          git config --local user.name "Noah Hsu"
+          git config --local user.email "boyanzh233@gmail.com"
+          git config --local user.name "BoYanZh"
           git commit --amend -m "upload dev dist"
           cd ..
 
@@ -72,5 +68,5 @@ jobs:
           github_token: ${{ secrets.MY_TOKEN }}
           branch: dev
           directory: web-dist
-          repository: alist-org/web-dist
+          repository: BoYanZh/web-dist
           force: true
