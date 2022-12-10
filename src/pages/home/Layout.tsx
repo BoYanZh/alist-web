@@ -6,6 +6,7 @@ import { Body } from "./Body"
 import { Footer } from "./Footer"
 import { Header } from "./Header"
 import { Toolbar } from "./toolbar/Toolbar"
+import { Carousel } from "./Carousel"
 
 const Index = () => {
   useTitle(getSetting("site_title"))
@@ -15,6 +16,7 @@ const Index = () => {
   }
   return (
     <>
+      <Carousel />
       <Header />
       <Toolbar />
       <Body />

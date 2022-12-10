@@ -1,5 +1,6 @@
 import { VStack } from "@hope-ui/solid"
 import { Nav } from "./Nav"
+import { CustomNav } from "./CustomNav"
 import { Obj } from "./Obj"
 import { Readme } from "./Readme"
 import { Container } from "./Container"
@@ -16,6 +17,7 @@ export const Body = () => {
         w="$full"
         gap="$4"
       >
+        <CustomNav />
         <Nav />
         <Obj />
         <Readme />

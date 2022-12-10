@@ -1,0 +1,37 @@
+.button {
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+}
+
+.button-left {
+  left: 0;
+  margin-left: 20px;
+}
+
+.button-right {
+  right: 0;
+  margin-right: 20px;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.vstack {
+  position: relative;
+}
