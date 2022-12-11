@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: course
           path: alist-web
           persist-credentials: false
           fetch-depth: 0
@@ -54,12 +54,12 @@ jobs:
       - name: Commit dist
         run: |
           cd web-dist
-          rm -rf dist
+          rm -rf *
           cp -r ../alist-web/dist .
           git add .
           git config --local user.email "boyanzh233@gmail.com"
           git config --local user.name "BoYanZh"
-          git commit --amend -m "upload course dist"
+          git commit --amend -m "upload new course dist"
           cd ..
 
       - name: Upload dist files
