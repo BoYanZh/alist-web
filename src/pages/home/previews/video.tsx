@@ -96,7 +96,7 @@ const Preview = () => {
     },
     lang: ["en", "zh-cn", "zh-tw"].includes(currentLang().toLowerCase())
       ? (currentLang().toLowerCase() as any)
-      : "en",
+      : "zh-cn",
     lock: true,
     fastForward: true,
     autoPlayback: true,
