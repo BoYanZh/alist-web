@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: BoYanZh/web-dist
-          ref: dev
+          ref: course
           path: web-dist
           persist-credentials: false
           fetch-depth: 0
@@ -59,14 +59,14 @@ jobs:
           git add .
           git config --local user.email "boyanzh233@gmail.com"
           git config --local user.name "BoYanZh"
-          git commit --amend -m "upload dev dist"
+          git commit --amend -m "upload course dist"
           cd ..
 
       - name: Upload dist files
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.MY_TOKEN }}
-          branch: dev
+          branch: course
           directory: web-dist
           repository: BoYanZh/web-dist
           force: true
